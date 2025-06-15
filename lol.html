@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>리그 오브 레전드 입문 가이드</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0a192f;
+      color: #ccd6f6;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .navbar {
+      background-color: #112240;
+      padding: 1rem 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgb(0 0 0 / 0.7);
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      color: #64ffda;
+      font-weight: 700;
+      font-size: 1.5rem;
+      text-decoration: none;
+      letter-spacing: 2px;
+      cursor: pointer;
+    }
+
+    .nav-menu {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+
+    .nav-menu li a {
+      color: #8892b0;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .nav-menu li a:hover,
+    .nav-menu li a.active {
+      color: #64ffda;
+    }
+
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 2rem 0;
+      color: #64ffda;
+      text-align: center;
+    }
+
+    .content-section {
+      display: none;
+    }
+
+    .content-section h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #64ffda;
+    }
+
+    #valorant-agent-list,
+    #recommended-weapon-list {
+      list-style-type: none;
+    }
+
+    #valorant-agent-list li,
+    #recommended-weapon-list li {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+      color: #8892b0;
+    }
+
+    footer {
+      background-color: #112240;
+      padding: 1rem 0;
+      text-align: center;
+      color: #8892b0;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 상단 네비게이션 -->
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Riot Guide</a>
+      <ul class="nav-menu">
+        <li><a href="https://www.leagueoflegends.com/ko-kr//" target="_blank">롤 다운받기</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- 본문 -->
+  <main class="container">
+    <h1 class="section-title">리그 오브 레전드 입문 가이드</h1>
+
+    <!-- 탭 메뉴 -->
+    <nav class="navbar">
+      <ul class="nav-menu">
+        <li><a href="#" class="nav-link active" data-target="game-intro">리그오브레전드란?</a></li>
+        <li><a href="#" class="nav-link" data-target="recommended-agents">초보자 추천 챔피언</a></li>
+        <li><a href="#" class="nav-link" data-target="game-terms">기본 게임 용어</a></li>
+        <li><a href="#" class="nav-link" data-target="roles">라인별 역할 소개</a></li>
+      </ul>
+    </nav>
+
+    <!-- 섹션: 게임 설명 -->
+    <section id="game-intro" class="content-section" style="display: block;">
+      <h2>게임 설명</h2>
+      <p>리그 오브 레전드는 라이엇 게임즈(Riot Games)에서 만든 5 대 5 팀 전략 게임입니다.<br>
+    플레이어는 서로 다른 특성을 가지고 있는 170여가지의 <strong>챔피언</strong>이라는 캐릭터를 하나 선택해서, 상대 팀과 전투를 벌입니다.</p>
+
+    <ul>
+      <li><strong>기본 장르:</strong> MOBA (Multiplayer Online Battle Arena)</li>
+      <li><strong>출시일:</strong> 2009년</li>
+      <li><strong>인원수:</strong> 한 게임당 총 10명 (5명씩 두 팀)</li>
+    </ul>
+  <br>
+  <br>
+  <h2>게임의 승리 조건</h2>
+      <ul>
+      <li>상대 팀의 <strong>넥서스(Nexus)</strong>를 먼저 파괴하면 승리!</li>
+    </ul>
+    <p>넥서스는 각 팀의 기지 안쪽에 있는 핵심 건물입니다.<br>
+    넥서스를 부수기 위해선 적의 1차 포탑, 2차포탑 등 방어 건물들을 모두 제거해야만 넥서스 파괴가 가능해집니다.</p>
+  <br>
+  <br>
+  <h2>게임의 전체적인 진행 방식</h2>
+  <h3>① 게임 시작 전 (챔피언 선택)</h3>
+    <p>각자 <strong>챔피언</strong>을 하나씩 선택합니다.</p>
+    <p>챔피언마다 역할과 스킬이 다릅니다.<br>예: 딜러, 탱커, 서포터, 암살자 등</p>
+    <br>
+    <h3>② 라인 배치 (초반)</h3>
+    <p>맵은 크게 3개의 길(라인)으로 나뉘어 있습니다.</p>
+    <table>
+      <thead>
+        <tr><th>라인명</th><th>설명</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>탑(Top)</td><td>윗쪽 길 – 보통 혼자 가는 경우 많음</td></tr>
+        <tr><td>미드(Mid)</td><td>가운데 길 – 혼자 가고 중요 포지션</td></tr>
+        <tr><td>봇(Bot)</td><td>아래쪽 길 – 보통 2명이 함께 감 (원딜+서포터)</td></tr>
+        <tr><td>정글(Jungle)</td><td>라인 사이 공간 – 몬스터를 사냥하며 맵 전체를 돌아다니는 역할</td></tr>
+      </tbody>
+    </table>
+    <br>
+    <h3>③ 라인전 (초반~중반)</h3>
+    <p>각자 라인에서 싸우고(라인전) <strong>미니언(자동으로 나오는 병사)</strong>을 처치하며 골드(재화)를 벌고 레벨업을 합니다.</p>
+    <p>돈으로 아이템을 사서 챔피언을 강화할 수 있습니다.</p>
+    <br>
+    <h3>④ 한타 & 오브젝트 싸움 (중반~후반)</h3>
+    <p>서로 모여서 싸우는 <strong>팀 전투(한타)</strong>가 벌어집니다.</p>
+    <p>용(드래곤), 전령, 바론 같은 강력한 몬스터(<strong>오브젝트</strong>)를 차지하려고 경쟁합니다.</p>
+    <p>이걸 먹으면 팀 전체에 강력한 버프가 생깁니다.</p>
+    <br>
+    <h3>⑤ 타워 밀기 & 넥서스 파괴 (후반)</h3>
+    <p><strong>적의 방어 건물(타워)</strong>을 부수고,</p>
+    <p>결국 넥서스까지 밀고 들어가 파괴하면 게임에서 승리합니다.</p>
+    </section>
+
+
+    
+<section id="recommended-agents" class="content-section">
+ 
+  <h2>가렌(Garen)-탑</h2>
+      <img src="images/garen.jpg" alt="가렌" style="width: 300px; height: 300px;">
+    <p><strong>가렌은 주 포지션 탑으로 탱킹과 딜이 평타 이상인 챔프입니다.<br>상대에게 다가가서 데미지를 입히는 근거리 챔피언으로 기본 공격만으로도 큰 피해를 줄 수 있어 초보자들이 다루기 쉽습니다.</strong></p>
+    <br>
+    <p><strong>주요 스킬:</strong></p>
+    <ul>
+      <li><strong>Q - 결단:</strong> 다음 공격이 강화되어 침묵 효과 부여</li>
+      <li><strong>W - 용기의 심장:</strong> 방어력과 마법 저항력 증가</li>
+      <li><strong>E - 심판:</strong> 회전하면서 주위 적들에게 피해</li>
+      <li><strong>R - 데마시아의 정의:</strong> 체력이 낮은 적을 마무리 일격</li>
+    </ul>
+    <br>
+    <p><strong>추천 이유:</strong>단순한 스킬 조합, 탱킹 능력, 높은 생존력</p>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="champion">
+    <h2>애쉬(Ashe)-원거리 딜러(AD)</h2>
+    <img src="images/ashe.jpg" alt="에쉬" style="width: 300px; height: 300px;">
+    <p><strong>에쉬는 초보자가 하기 좋은 원딜 포지션 챔피언입니다.<br>기본 공격으로 슬로우를 거는 패시브 덕분에 적 추적에 유리하며, 궁극기(R)는 전장을 넓게 보는데 도움을 줍니다.</strong></p>
+    <br>
+    <p><strong>주요 스킬:</strong></p>
+    <ul>
+      <li><strong>Q - 집중 사격:</strong> 기본 공격 속도 대폭 증가</li>
+      <li><strong>W - 일제 사격:</strong> 광역 느려짐 효과가 있는 화살 발사</li>
+      <li><strong>E - 매의 시야:</strong> 정찰용 매를 날려 시야 확보</li>
+      <li><strong>R - 마법의 수정화살:</strong> 적을 기절시키는 원거리 궁극기</li>
+    </ul>
+    <br>
+    <p><strong>추천 이유:</strong>스킬 구성이 비교적 단순한 편, 원거리에서 딜을 넣어 지속딜에 적응</p>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="champion">
+    <h2>럭스(Lux)-미드/서포터</h2>
+    <img src="images/lux.jpg" alt="럭스" style="width: 300px; height: 300px;">
+    <p><strong>럭스는 사거리가 길고 강력한 스킬을 가지고 있는 챔피언입니다.<br>속박(Q)스킬을 통해 적을 묶을 시 유리한 포지션을 잡을 수 있습니다.<br></strong></p>
+    <br>
+    <p><strong>주요 스킬:</strong></p>
+    <ul>
+      <li><strong>Q - 광채의 속박:</strong> 적을 묶는 속박 스킬</li>
+      <li><strong>W - 프리즘 보호막:</strong> 아군을 보호하는 실드 제공</li>
+      <li><strong>E - 광명의 특이점:</strong> 범위 폭발과 슬로우 효과</li>
+      <li><strong>R - 최후의 섬광:</strong> 멀리서 강력한 광선 발사</li>
+    </ul>
+    <br>
+    <p><strong>추천 이유:</strong>멀리서 안전하게 적 처치, 적 마무리하기 좋음</p>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="champion">
+    <h2>말파이트(Malphite)-탑/서포터</h2>
+    <img src="images/malphite.jpg" alt="말파이트" style="width: 300px; height: 300px;">
+    <p><strong>말파이트는 높은 방어력과 견고한 생명력을 가진 챔피언입니다.<br>방어력이 높아 자주 죽는 초보자들에게 좋은 챔피언이기도 합니다.</strong></p>
+    <br>
+    <p><strong>주요 스킬:</strong></p>
+    <ul>
+      <li><strong>Q - 지진의 파편:</strong> 느려짐과 함께 마법 피해</li>
+      <li><strong>W - 천둥소리:</strong> 강화된 공격과 방어력 증가</li>
+      <li><strong>E - 지진 강타:</strong> 주변 적에게 피해 및 공격 속도 감소</li>
+      <li><strong>R - 멈출 수 없는 힘:</strong> 돌진하며 넓은 범위 기절</li>
+    </ul>
+    <br>
+    <p><strong>추천 이유:</strong>간단한 스킬 구성, 높은 생존력</p>
+  </div>
+  <br>
+  <br>
+  <br>
+  <div class="champion">
+    <h2>소라카(Soraka)-서포터</h2>
+    <img src="images/soraka.jpg" alt="소라카" style="width: 300px; height: 300px;">
+    <p><strong>소라카는 힐과 방어 스킬이 많아 초보자들이 자주하는 서포터 챔피언 입니다.<br>롤 플레이에 적응하기 좋은 매커니즘의 챔피언입니다.</strong></p>
+    <p><strong>주요 스킬:</strong></p>
+    <ul>
+      <li><strong>Q - 별부름:</strong> 범위 피해 및 체력 회복</li>
+      <li><strong>W - 은하의 축복:</strong> 아군에게 체력을 회복시켜줌</li>
+      <li><strong>E - 침묵의 외침:</strong> 침묵과 속박을 유발하는 범위 스킬</li>
+      <li><strong>R - 기원의 소리:</strong> 전 맵 아군에게 체력 회복</li>
+    </ul>
+    <br>
+    <p><strong>추천 이유:</strong>단순한 스킬 구성, 전반적인 게임 흐름 적응 유리</p>
+    <br>
+  </div>
+</section>
+
+    <!-- 섹션: 게임 용어 -->
+    <section id="game-terms" class="content-section">
+      <h2>기본 게임 용어</h2>
+      <h3>전투 관련 용어</h3>
+      <ul>
+        <li>한타 - 한꺼번에 다 같이 싸우는 전투</li>
+        <li>이니시 - 상대한테 싸움 걸어서 교전 시작하자는 의미</li>
+        <li>갱 - 정글이 라인전 하는 라이너를 도우러 가는 행위</li>
+        <li>로밍 - 라이너가 다른 라인으로 도우러 가는 행위</li>
+      </ul>
+      <br><h3>핑/지도 관련 용어</h3>
+      <ul>
+        <li>미아핑 - 상대가 라인전 중 라인에서 사라짐(조심하라는 뜻)</li>
+        <li>백핑 - 위험하니까 도망가라는 뜻</li>
+        <li>시야 - 설치된 와드로 확인 가능한 위치 정보</li>
+        <li>부쉬 - 맵에 있는 풀숲들</li>
+        <li>핑와 - 핑크 와드(제어 와드)</li>
+        <li>CS - 미니언들 통칭
+      </ul>
+      <br><h3>전략 관련 용어</h3>
+      <ul>
+        <li>사이드 민다 - 미드를 제외한 탑, 바텀만 파서 포탑을 철거하는 행위</li>
+        <li>옵젝 챙겨라 - 정글에 있는 오브젝트들 먹으라는 뜻</li>
+        <li>스노우볼 - 이득을 계속 굴려서 격차를 벌리는 행위</li>
+         </br>
+      </ul>
+
+         </section>
+
+   
+   <section id="roles" class="content-section">
+      <h2>탑<img src="images/top.jpg" alt="" style="width: 80px; height: 80px;"></h2>
+      <h3>주요 역할</h3>
+  <ul>
+    <li>라인 유지 및 맞라인 압박</li>
+    <li>한타 시 진입 또는 상대 딜러 끊기</li>
+    <li>앞라인 형성 (탱커/브루저 역할)</li>
+    <br>
+  </ul>
+      <h3>해야할 일</h3>
+  <ul>
+    <li><strong>초반:</strong>라인전 집중, 상대보다 우위 점하기, CS 챙기기</li>
+    <li><strong>중반:</strong>텔레포트 활용으로 전맵 개입, 사이 운영</li>
+    <li><strong>후반:</strong>한타 때 앞라인 형성 또는 상대 딜러 물기</li>
+  </ul>
+  <br>
+  <p><strong>탑은 고립된 1:1 라인이라 실력차가 뚜렷하게 드러나며, 성장 후 큰 영향력을 가집니다.</strong></p>
+  <br>
+  <br>
+  <h2>정글<img src="images/jungle.jpg" alt="" style="width: 80px; height: 80px;"></h2>
+      <h3>주요 역할</h3>
+  <ul>
+    <li>갱킹으로 라인 개입</li>
+    <li>오브젝트(용, 바론, 협곡의 전령) 관리</li>
+    <li>시야 장악 및 맵 컨트롤</li>
+    <li>한타 때 진입 또는 라인 암살</li>
+    <br>
+  </ul>
+      <h3>해야할 일</h3>
+  <ul>
+    <li><strong>초반:</strong>정글 동선 최적화, 갱 타이밍 판단, 오브젝트 체크</li>
+    <li><strong>중반:</strong>드래곤/전령 타이밍 관리, 라인 합류</li>
+    <li><strong>후반:</strong>진입 각, 궁극기 활용, 오브젝트 먹기</li>
+  </ul>
+  <br>
+  <p><strong>정글은 전략의 중심축이며 팀 전체 성장에 큰 영향을 주므로 판단력이 매우 중요합니다.</strong></p>
+  <br>
+  <br>
+  <h2>미드<img src="images/mid.jpg" alt="" style="width: 80px; height: 80px;"></h2>
+      <h3>주요 역할</h3>
+  <ul>
+    <li>라인전 승리 및 주도권 장악</li>
+    <li>정글/사이드라인 로밍</li>
+    <li>한타에서 핵심 역할</li>
+    <br>
+  </ul>
+      <h3>해야할 일</h3>
+  <ul>
+    <li><strong>초반:</strong>라인 주도권 확보, 정글 도와주기</li>
+    <li><strong>중반:</strong>로밍, 시야 확보, 드래곤 교전 참여</li>
+    <li><strong>후반:</strong>한타에서 딜 or CC 역할, 포지셔닝 중요</li>
+  </ul>
+  <br>
+  <p><strong>미드는 중앙 허브처럼 다른 라인에 영향력을 미치기 쉬우며, 스킬샷과 판단력이 중요합니다.</strong></p>
+  <br>
+  <br>
+  <h2>원딜<img src="images/adc.jpg" alt="" style="width: 80px; height: 80px;"></h2>
+      <h3>주요 역할</h3>
+  <ul>
+    <li>주요 딜러 (지속적인 물리, 마법 딜)</li>
+    <li>오브젝트 타격 (타워, 바론 등)</li>
+    <li>후반 캐리 핵심 포지션</li>
+    <br>
+  </ul>
+      <h3>해야할 일</h3>
+  <ul>
+    <li><strong>초반:</strong>CS 안정적으로 먹기, 서폿과 협력</li>
+    <li><strong>중반:</strong>아이템 파밍, 안전한 위치로 포지셔닝</li>
+    <li><strong>후반:</strong>한타에서 생존하면서 딜 최대한 넣기</li>
+  </ul>
+  <br>
+  <p><strong>원딜은 장거리 딜러지만 매우 취약하므로, 서포터 보호와 본인의 포지션이 생명입니다.</strong></p>
+  <br>
+  <br>
+  <h2>서포터<img src="images/support.jpg" alt="" style="width: 80px; height: 80px;"></h2>
+      <h3>주요 역할</h3>
+  <ul>
+    <li>원딜 보호 & 라인 관리</li>
+    <li>시야 장악 (와드 설 & 와드 제거)</li>
+    <li>이니시 or 카운터 이니시</li>
+    <li>팀 유틸성 제공 (회복, 보호막, CC 등)</li>
+    <br>
+  </ul>
+      <h3>해야할 일</h3>
+  <ul>
+    <li><strong>초반:</strong>와드 설, 원딜 보호, 견제 or 이니시</li>
+    <li><strong>중반:</strong>로밍, 시야 장악, 전령/드래곤 준비</li>
+    <li><strong>후반:</strong>한타에서 원딜 지키기 or 진입 각 만들기</li>
+  </ul>
+  <br>
+  <p><strong>서포터는 골드 수급은 적지만 전략적 영향력 매우 큰, 게임 전체 판을 조율하는 보이지 않는 지휘자입니다.</strong></p>
+  <br>
+</section>
+  </main>
+
+  <!-- 푸터 -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Riot Guide | Made by TwoTwoOne</p>
+    </div>
+  </footer>
+   <!-- 탭 전환 JavaScript -->
+<script>
+  const tabs = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('.content-section');
+
+  tabs.forEach(tab => {
+    tab.addEventListener('click', e => {
+      e.preventDefault();
+
+      // 모든 탭 비활성화
+      tabs.forEach(t => t.classList.remove('active'));
+
+      // 클릭한 탭 활성화
+      tab.classList.add('active');
+
+      // 모든 섹션 숨기기
+      sections.forEach(section => {
+        section.style.display = 'none';
+      });
+
+      // 대상 섹션 보이기
+      const targetId = tab.getAttribute('data-target');
+      document.getElementById(targetId).style.display = 'block';
+    });
+  });
+</script>

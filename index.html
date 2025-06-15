@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>라이엇 게임즈 입문 가이드</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://kit.fontawesome.com/7a6450d4e2.js" crossorigin="anonymous"></script>
+  <style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0a192f;
+  color: #ccd6f6;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 네비게이션 바 */
+.navbar {
+  background-color: #112240;
+  padding: 1rem 0;
+  z-index: 100;
+  box-shadow: 0 2px 8px rgb(0 0 0 / 0.7);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: #64ffda;
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-decoration: none;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-menu li a {
+  color: #8892b0;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: #64ffda;
+}
+
+/* 메인 콘텐츠 */
+.main-content {
+  padding: 4rem 0 6rem;
+  text-align: center;
+}
+
+.intro-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #64ffda;
+}
+
+.intro-section p {
+  font-size: 1.2rem;
+  color: #8892b0;
+  margin-bottom: 3rem;
+}
+
+/* 게임 카드 */
+.game-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.card {
+  background-color: #112240;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  width: 320px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(100, 255, 218, 0.7);
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1.5rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #ccd6f6;
+}
+
+.card-content h2 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  color: #64ffda;
+}
+
+.card-content p {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  color: #8892b0;
+}
+
+.card-content button {
+  background-color: #64ffda;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #0a192f;
+  border-radius: 6px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.3s ease;
+}
+
+.card-content button i {
+  margin-left: 0.5rem;
+}
+
+.card-content button:hover {
+  background-color: #52c7b8;
+}
+
+/* 푸터 */
+footer {
+  background-color: #112240;
+  padding: 1rem 0;
+  text-align: center;
+  color: #8892b0;
+  font-size: 0.9rem;
+}
+
+/* 반응형 */
+@media (max-width: 992px) {
+  .game-cards {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .game-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+.section-title {
+  font-size: 2rem;
+  color: #64ffda;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid #64ffda;
+  padding-bottom: 0.5rem;
+}
+
+.list-item {
+  background-color: #0a192f;
+  border: 1px solid #64ffda;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #ccd6f6;
+}
+
+.list-item:hover {
+  background-color: #112240;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.random-btn {
+  margin-top: 1rem;
+  background-color: #64ffda;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-weight: 700;
+  color: #0a192f;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: inline-block; /* 수정된 부분 */
+}
+
+.random-btn:hover {
+  background-color: #52c7b8;
+}
+
+.saved-message {
+  color: #64ffda;
+  margin-top: 0.7rem;
+  font-size: 0.9rem;
+  display: none; /* 수정된 부분: 기본 숨김 */
+}
+</style>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="container nav-container">
+      <a href="index.html" class="logo">Riot Guide</a>
+      <ul class="nav-menu">
+        <li><a href="https://www.leagueoflegends.com/ko-kr/" target="_blank">롤 다운받기</a></li>
+<li><a href="https://playvalorant.com/ko-kr/" target="_blank">발로란트 다운받기</a></li>
+<li><a href="https://teamfighttactics.leagueoflegends.com/ko-kr/" target="_blank">롤토체스 다운받기</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="main-content">
+    <section class="intro-section container">
+      <h1>라이엇 게임즈 입문 가이드</h1>
+      <p>쉽고 빠르게 정보를 찾기 원하는 초보자들을 위한 가이드</p>
+    </section>
+
+    <section class="game-cards container">
+      <article class="card" onclick="location.href='lol.html'">
+        <img src="images/lol.jpg" alt="리그 오브 레전드" />
+        <div class="card-content">
+          <h2>리그 오브 레전드</h2>
+          <p>5대5 팀 전투 게임</p>
+          <button>입문 가이드 보기 <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </article>
+
+      <article class="card" onclick="location.href='valorant.html'">
+        <img src="images/valorant.jpg" alt="발로란트" />
+        <div class="card-content">
+          <h2>발로란트</h2>
+          <p>정밀한 에임과 팀 전략의 FPS</p>
+          <button>입문 가이드 보기 <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </article>
+
+      <article class="card" onclick="location.href='tft.html'">
+        <img src="images/tft.jpg" alt="롤토체스" />
+        <div class="card-content">
+          <h2>롤토체스</h2>
+          <p>본인만의 덱 구성을 하는 전략 게임</p>
+          <button>입문 가이드 보기 <i class="fas fa-arrow-right"></i></button>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Riot Guide | Made by TwoTwoOne</p>
+    </div>
+  </footer>
+</body>
+</html>
